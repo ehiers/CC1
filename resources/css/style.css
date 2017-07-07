@@ -1,36 +1,63 @@
+@font-face {
+  font-family: "AmTypeReg";
+  src: url(../fonts/American-Typewriter-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: "Through";
+  src: url(../fonts/Through-the-night.ttf) format('truetype');
+}
+@font-face {
+  font-family: "Tox";
+  src: url(../fonts/Tox-Typewriter.ttf) format('truetype');
+}
+@font-face {
+  font-family: "Type-ra";
+  src: url(../fonts/type-ra.ttf) format('truetype');
+}
+
+
+
 * {
     box-sizing: border-box;
 }
 html {
   font-size: 16px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: black;
 }
 h1 {
-  font-family: 'Special Elite', serif;
-  font-size: 8rem;
+  font-family: 'AmTypeReg', serif;
+  font-size: 6rem;
   font-weight: normal;
   color: rgba(212,212,212,1);
   color: rgba(255,255,255,1);
   color: rgba(275,275,275,1);
-  color: white;
   color: rgba(10,10,10,1);
+
+  background-color: white;
+  background-color: rgba(255,255,255,0.9);
+
   color: black;
 }
+
+
 h2 {
-  font-family: 'Special Elite', serif;
-  font-size: 2.25rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'AmTypeReg', serif;
+  font-size: 2rem;
 }
 h3 {
   font-size: 1.25rem;
 }
 h6 {
-  font-family: 'Special Elite', serif;
+  font-family: 'AmTypeReg', serif;
   font-size: 0.8rem;
 }
 .fullnav a {
   text-decoration: none;
-  color: white;
+  color: rgba(184,32,29,1);
+  color: rgba(15,61,77,1);
+  font-weight: bold;
   font-size: 1.25rem;
 }
 .fullnav {
@@ -47,68 +74,107 @@ header {
   border-bottom: 1px solid rgba(10,10,10,1);
   width: 100%;
   background-color: rgba(255,255,255,0.2);
-  position: fixed;
+  background-color: rgba(255,255,255,0.9);
 }
 main {
-
-  background-image: url("./IMG_9922_bw.jpg");
-  background-image: url("./IMG_9922.jpg");
-  background-repeat: no-repeat;
+  background-image: url("./IMG_9797_crop1_bw.jpg");
+  background-image: url("./IMG_9797_crop1.jpg");
   background-position: center;
   background-size: cover;
   height: 55rem;
   display: flex;
   flex-direction: column;
-  opacity: 0.9;
+  opacity: 1;
 }
 #container1 {
   display: flex;
+  height: 880px;
 }
-#mainleft,
-#mainright {
+#mainleft {
   height: 48rem;
-  width: 50%;
+
   display: flex;
 }
-#mainright {
-  justify-content: flex-end;
-}
+
 
 .titlebox{
-  margin-top: 22rem;
+  margin-top: 32rem;
 }
-.showbox{
-  margin-top: 34rem;
-  margin-right: 1rem;
-  width: 60%;
-  background-color: rgba(255,255,255,0.5);
-  height: 15rem;
+
+
+
+
+#container2 {
+  background-color: black;
+  background-color: rgba(240, 237, 218,1);
+  background-color: rgba(255, 252, 235,1);
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid rgba(10,10,10,1);
-}
-.showbox h2 {
-  padding-top: 1rem;
-}
-.showbox ul {
-  margin: 1rem 1.5rem 0.5rem 1rem;
+  justify-content: center;
+  border-bottom: 1px solid black;
 
 }
-.showbox li {
+.column {
+  background-color: rgba(240, 237, 218,1);
+  background-color: rgba(255, 252, 235,1);
+  width: 75%;
+  height: 100%;
+
   display: flex;
-  margin: 0.5rem 0;
+}
+
+.leftcol,
+.rightcol {
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+  margin: 2rem 0;
+}
+.rightcol h2,
+.leftcol h2 {
+  border-bottom: 1px solid black;
+  margin: 1rem 0;
+
+}
+.rightcol {
+  margin-left: 1rem;
+}
+article {
+  margin-bottom: 1rem;
+}
+ul li {
+  background-color: rgba(255,255,255,1);
+  background-color: white;
+  background-color: rgba(184,32,29,.2);
+  background-color: rgba(15,61,77,.2);
+  margin: 0.5rem;
+  display: flex;
+  height: 4rem;
+  align-items: center;
 }
 .date {
-  width: 15%;
+  width: 30%;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  font-family: 'AmTypeReg', serif;
 }
 .event {
-  width: 85%;
+  width: 70%;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
 }
+
+
+
 footer {
   height: 20rem;
   background-color: rgba(92,92,92,1);
   background-color: rgba(104,143,130,.5);
+  background-color: rgba(240, 237, 218,1);
+  background-color: black;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,4 +183,59 @@ footer {
 }
 footer h6{
   margin: 0.5rem 0;
+}
+
+/* Various Screens   Keeps events from popping out of box */
+@media only screen and (max-width: 1125px) {
+  .event {
+    font-size: 1rem;
+  }
+  .date {
+      font-size: 1.5rem;
+  }
+}
+
+/* screen < 860  Keeps logo on 1 line, shortens main image */
+@media only screen and (max-width: 860px) {
+  h1 {
+    font-size: 4rem;
+  }
+  main {
+    height: 40rem;
+  }
+  .titlebox{
+    margin-top: 27rem;
+  }
+}
+/* Phone screen < 768   */
+@media only screen and (max-width: 768px) {
+  h1 {
+
+  }
+  main {
+    height: 30rem;
+  }
+  .titlebox{
+    margin-top: 19rem;
+  }
+
+  .column {
+    flex-direction: column-reverse;
+  }
+  .leftcol,
+  .rightcol {
+    width: 100%;
+  }
+  .date {
+    width: 20%;
+    font-size: 2rem;
+    margin-left: 1rem;
+
+  }
+  .event {
+    width: 80%;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
 }
